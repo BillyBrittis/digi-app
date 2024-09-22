@@ -1,3 +1,3 @@
 const digiviceImage = 'assets/images/digivice.png';
-const gif1 = 'assets/gifs/giphy1.webp';
+const gif1 = 'assets/gifs/crest.gif';
 const patamonLoading = 'assets/gifs/patamon-flying.gif';

@@ -1,8 +1,8 @@
 import 'package:digi_app/controllers/api_controller.dart';
 import 'package:digi_app/screens/components/gradient_text.dart';
 import 'package:digi_app/screens/components/home_card_digimon_widget.dart';
+import 'package:digi_app/screens/components/loading_component.dart';
 import 'package:digi_app/utils/consts/colors.dart';
-import 'package:digi_app/utils/consts/images.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_icon/gradient_icon.dart';
 
@@ -62,10 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: blackColor,
         appBar: AppBar(
           scrolledUnderElevation: 0.0,
-          backgroundColor: Colors.black,
+          backgroundColor: blackColor,
           title: const GradientText(
             text: 'DigiApp',
             style: TextStyle(
@@ -115,14 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
               ),
-              if (isLoading)
-                Center(
-                  child: Image.asset(
-                    patamonLoading,
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
+              if (isLoading) const LoadingComponent()
             ],
           ),
         ),
